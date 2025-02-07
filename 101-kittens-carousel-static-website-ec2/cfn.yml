@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: |
+  Create static kittens carousel website
+
+Parameters:
+  
+Resources:
+
+  WebSecGrp:
+    Type: AWS::Backup::LogicallyAirGappedBackupVault
+    Properties:
+      AccessPolicy: "JSON"
+      BackupVaultName: "String" # Required
+      BackupVaultTags:
+         
+      MaxRetentionDays: "Number" # Required
+      MinRetentionDays: "Number" # Required
+      Notifications:
+        BackupVaultEvents:
+          - "String"
+        SNSTopicArn: "String"
+
+  
+Outputs:
+ 
