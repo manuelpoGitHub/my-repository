@@ -1,13 +1,13 @@
-from flask import Flask 
+from flask import Flask # Import Flask module
 
-app = Flask(__name__)
+app = Flask(__name__) #Create an object named `app` from imported Flask module
 
 @app.route("/")
-def hello():
+def hello():              #Create a function `hello` which returns a string `Hello World`
     return "Hello World"
 
 @app.route("/bye")
-def goodbye():
+def goodbye():       #create a function 'Goodbye which returns string "Goodbye" 
     return "Goodbye"
 
 @app.route("/third/subthird")
